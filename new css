@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+
+}
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+
+    width: 140px;
+
+}
+#contact {
+    margin-top: 50rem;
+}
+
+.contact_title {
+    font-size: 60px;
+}
+.home_title {
+    color: darkorange;
+}
+
+.home_profile {
+    margin-top: -20rem;
+    height: 50rem;
+}
+
+.home_container {
+    margin-top: 18rem;
+    padding-bottom: 20rem;
+}
+
+nav ul li{
+    height: 3%;
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0px;
+    height: 3px;
+    background-color: darkorange;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20px;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 10px;
+}
+.header-text h1 span{
+    color: orange;
+}
+/* -------------about------------------------- */
+#about{
+    padding: 130px 0;
+    color: #ababaa;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 150%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 40%;
+}
+ .sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color:#fff
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: orange;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+        width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+ color: orange;
+ font-size: 14px;
+}
+/*-------------------------------services ni yan --------*/
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: gray;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 10px;
+    padding-bottom: 10rem;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #080808;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: orange;
+    transform: translateY(-10px);
+}
+/* contact ni yannel */
+.contact-left{
+    flex-basis: 100%;
+}
+.contact-right{
+    flex-basis: 100%;
+}
+.contact-left p{
+    margin-top: 10px;
+}
+.btn.btn2{
+    display: inline-block;
+    background: orange;
+}
+.contact-right form{
+    width: 80%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: orange;
+    padding: 15px;
+    margin: 15px;
+    color: black;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 300;
+    text-align: center;
+    padding: 10px 0;
+    background: #262626;
+    font-weight: 400;
+    margin-top: 20px;
+}
+/*----------------css cellphone show haha ---------- */
+@media only screen and (max-with: 600px){
+    #header{
+        background-image: url(../img/huy.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+}
